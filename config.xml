@@ -2,19 +2,19 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
     id        = "com.phonegap.example"
-    version   = "1.0.0">
+    version   = "2.2.0">
 
 
 <access origin="*" />
 
-<name>PhoneGap Build Application</name>
+<name>Lanzar Gato</name>
 
 <description>
-A simple PhoneGap Build application.
+App demo de lanzar Gatos Gif
 </description>
 
 <author href="https://example.com" email="you@example.com">
-Your Name
+Dan hanfry
 </author>
 
 </widget>
