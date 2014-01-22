@@ -1,5 +1,21 @@
 html {
 
 	text-align: center;
+	background: #ddd;
+
+}
+
+section {
+
+	text-align: center;
+}
+
+#IMG img{
+
+	width: 100%;
+	height: auto;
+
+	background: red;
+	border-radius: 30px;
 
 }
