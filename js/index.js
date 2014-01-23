@@ -1,147 +1,83 @@
 
 
-function lanzaPeli1() 
+var rt= 'primera';
+
+function Inicio()
 {
 
-	$('#IMG > .IMG').attr('src','');
+	if ( rt == 'primera' ){
 
-	$.post("http://regalopeliculas.16mb.com/app/lanzaGato.php",                	      		 
-		   {
-			   nombre:"holaa",
+		$('#IMG > .a').css("display", "none");
+		$('#IMG > .b').css("display", "none"); 
+
+		CargarIMG('primera');
+
+		rt = 'a'
+
+
+	}else if ( rt == 'a'){
+
+		$('#IMG > .primera').css("display", "none");
+		$('#IMG > .b').css("display", "none"); 
+
+		$('#IMG > .' + rt).css("display", "block"); // mostrar
+
+		CargarIMG('b');
+
+		rt = 'b'
+
+	
+	}else if ( rt == 'b'){
+
+		$('#IMG > .primera').css("display", "none"); 
+		$('#IMG > .a').css("display", "none");
+
+		$('#IMG > .' + rt).css("display", "block"); // mostrar
+
+		CargarIMG('a');
+
+		rt = 'a'
+
+
 		
-		   },
-		   
-		   function(data){
-					
-			$('#IMG > .IMG').attr('src',data);
-				 
-		});
+	}
+
 
 }
 
-var rt= '';
-
-function ReadIMG_primera()
+function CargarIMG(rr)
 {
-	$('#boton').attr("disabled", true);
-	
-	if (rt == '' ) {
+
+	$('#load > .load').attr('src','images/cargando.gif'); // Circulo
+
+	$.ajax({
+		url:'http://regalopeliculas.16mb.com/app/lanzaGato.php',
+		type:'post',
+		success:  function (response) {
 		
-		 $('#load > .load').attr('src','http://www.decovending.com/img/cargando.gif');
-		 
-		 $('#load > .load').css("display", "block");
-		 
-		 $('#IMG > .primera').css("display", "none");
-		 $('#IMG > .a').css("display", "none");
-		
-		$.ajax({
-			url:'http://regalopeliculas.16mb.com/app/lanzaGato.php',
-			type:'post',
-			success:  function (response) {
-				
-			   $('#IMG > .primera').attr('src',response);
+		//$('#IMG > .' + rr).css("display", "none"); // No mostrar
+		$('#IMG > .' + rr ).attr('src',response);
+
+		alert(response);
 			   
-			}
-			});
-			
-	}else{
-			
-		if ( rt == '1' ) {
-			
-			rt = '2';
-			
-			$('#IMG > .a').css("display", "block");
-			
-			$('#IMG > .primera').css("display", "none");
-			$('#IMG > .b').css("display", "none");
-			
-			ReadIMG();
-			
-		}else if ( rt == '2' ) {
-			
-			rt = '1'; 
-			
-			$('#IMG > .a').css("display", "none");
-			
-			$('#IMG > .b').css("display", "block");
-			
-			ReadIMG();
-			
 		}
-		
+	});
 
-	
+}
+
+function ImgOnload(rr)
+{
+
+
+	if ( rr == 'primera'){
+
+		$('#IMG > .' + rr).css("display", "block"); // mostrar
+		$('#load > .load').css("display", "none"); // Quitar load
+
+		CargarIMG('a');
+		
 	}
 	
 }
-
-
-function ReadIMG()
-{
-
-	
-	if ( rt == '1' ) {
-
-		$.ajax({
-       	url:'http://regalopeliculas.16mb.com/app/lanzaGato.php',
-        type:'post',
-        success:  function (response) {
-			
-           $('#IMG > .a').attr('src',response);
-
-        }
-        });
-		
-	}else if ( rt == '2' ) {
-		
-		$.ajax({
-       	url:'http://regalopeliculas.16mb.com/app/lanzaGato.php',
-        type:'post',
-        success:  function (response) {
-			
-           $('#IMG > .b').attr('src',response);
-		   
-        }
-        });
-		
-	}
-	
-	
-}
-
-
-
-function ImgOnload()
-{	
-
-	$('#boton').attr("disabled", false);
-	
-	$('#IMG > .primera').css("display", "block");
-	
-	$('#load > .load').css("display", "none");
-	
-	rt = '1'
-	
-	ReadIMG();
-	
-}
-
-function ImgOnLoad_a_b()
-{
-	
-	$('#boton').attr("disabled", false);
-	
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
