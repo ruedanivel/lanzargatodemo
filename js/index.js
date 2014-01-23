@@ -55,11 +55,8 @@ function CargarIMG(rr)
 		type:'post',
 		success:  function (response) {
 		
-		//$('#IMG > .' + rr).css("display", "none"); // No mostrar
-		$('#IMG > .' + rr ).attr('src',response);
-
-		alert(response);
-			   
+			$('#IMG > .' + rr ).attr('src',response);
+ 
 		}
 	});
 
@@ -75,7 +72,7 @@ function ImgOnload(rr)
 		$('#load > .load').css("display", "none"); // Quitar load
 
 		CargarIMG('a');
-		
+
 	}
 	
 }
