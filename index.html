@@ -14,8 +14,10 @@
 
 <body>
 
-<button id="boton" onclick="Inicio()"> Lanzar Gato</button>
-<button id="boton" onclick="ReadIMG_primera()"> Top Gatos</button>
+<div id="boton">
+	<button onclick="Inicio()"> Lanzar Gato</button>
+	<button class="top" onclick="ReadIMG_primera()"> Top Gatos</button>
+</div>
         
 		<section>
         
@@ -27,7 +29,7 @@
             
             <div id="IMG">
 		
-                <img id="idImg" class="primera" src="" onload="ImgOnload('primera')">
+                <img id="idImg" class="primera" src="" onload="ImgOnload()">
 
 			</div>
 			

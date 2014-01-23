@@ -65,16 +65,11 @@ function CargarIMG(rr)
 function ImgOnload(rr)
 {
 
+	$('#IMG > .' + rr).css("display", "block"); // mostrar
+	$('#load > .load').css("display", "none"); // Quitar load
 
-	if ( rr == 'primera'){
+	CargarIMG('a');
 
-		$('#IMG > .' + rr).css("display", "block"); // mostrar
-		$('#load > .load').css("display", "none"); // Quitar load
-
-		CargarIMG('a');
-
-	}
-	
 }
 
 

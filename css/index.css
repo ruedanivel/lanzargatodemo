@@ -1,4 +1,10 @@
+
+@import url(http://fonts.googleapis.com/css?family=Averia+Sans+Libre);
+
+
+
 *{border:0; margin:0; padding:0;}
+
 
 html {
 
@@ -23,7 +29,7 @@ html {
 
 }
 
-button {
+#boton {
 
 	width: 100%;
 	padding: 5px;
@@ -35,9 +41,37 @@ button {
 
 }
 
-button:active  {
+#boton:active  {
 
 	background: #232323;
+	color:#fff;
+
+}
+
+.top {
+
+	background:rgb(38, 124, 104);
+	color:#fff;
+
+}
+
+button {
+
+	font-family: 'Averia Sans Libre', cursive;
+
+	padding: 5px;
+	font-size: 20px;
+	color:#232323;
+	margin: 0 0 5px 0;
+	border-radius: 10px;
+
+	background: #ddd;
+
+}
+
+button:active  {
+
+	background: #dd4b39;
 	color:#fff;
 
 }
