@@ -16,11 +16,11 @@ html {
 #idImg {
 
 	width: auto;
-	max-width: 100%;
+	max-width: 90%;
 
 
 	height: auto;
-	max-height: 90%;
+	max-height: 70%;
 
 	border-radius: 20px;
 
@@ -81,5 +81,21 @@ button:active  {
 	width: 250px;
 	height: auto;
 
+
+}
+
+
+.like {
+
+	float:left;
+
+	margin: 10px;
+}
+
+.dlike {
+
+	float:right;
+
+	margin: 10px;
 
 }
