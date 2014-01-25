@@ -9,8 +9,10 @@ function Inicio()
 
 	if ( rt == 'primera' ){
 
+		$('#IMG > .primera').css("visibility", "hidden");
 		$('#IMG > .a').css("visibility", "hidden");
-		$('#IMG > .b').css("visibility", "hidden"); 
+		$('#IMG > .b').css("visibility", "hidden");
+
 
 		CargarIMG('primera');
 
@@ -68,6 +70,7 @@ function ImgOnload(rr)
 {
 
 	$('.load').css("visibility", "hidden");
+	$('#IMG > .primera').css("visibility", "visible");
 
 	CargarIMG('a');
 
