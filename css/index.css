@@ -59,7 +59,8 @@ body {
 
 #IMG {
 
-	position:absolute;
+	position: absolute;
+
 	float: left;
 
 	top:30px;
@@ -72,18 +73,18 @@ body {
 	border-radius: 20px;
 
 
+
 }
 
 #IMG img {
 
-	position: relative;
 
 	width: auto;
 	max-width: 99%;
 
 
 	height: auto;
-	max-height: 99%;
+	max-height: 75%;
 
 }
 
@@ -115,8 +116,6 @@ button:active  {
 
 .like{
 
-	position: absolute;
-
 	float: left;
 
 	top:1px;
@@ -126,8 +125,6 @@ button:active  {
 
 
 .dlike{
-
-	position: absolute;
 
 	float: right;
 
