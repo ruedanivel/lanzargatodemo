@@ -1,5 +1,7 @@
 
 
+
+
 var rt= 'primera';
 
 function Inicio()
@@ -7,8 +9,8 @@ function Inicio()
 
 	if ( rt == 'primera' ){
 
-		$('#IMG > .a').css("display", "none");
-		$('#IMG > .b').css("display", "none"); 
+		$('#IMG > .a').css("visibility", "hidden");
+		$('#IMG > .b').css("visibility", "hidden"); 
 
 		CargarIMG('primera');
 
@@ -17,10 +19,10 @@ function Inicio()
 
 	}else if ( rt == 'a'){
 
-		$('#IMG > .primera').css("display", "none");
-		$('#IMG > .b').css("display", "none"); 
+		$('#IMG > .primera').css("visibility", "hidden");
+		$('#IMG > .b').css("visibility", "hidden"); 
 
-		$('#IMG > .' + rt).css("display", "block"); // mostrar
+		$('#IMG > .' + rt).css("visibility", "visible"); // mostrar
 
 		CargarIMG('b');
 
@@ -29,10 +31,10 @@ function Inicio()
 	
 	}else if ( rt == 'b'){
 
-		$('#IMG > .primera').css("display", "none"); 
-		$('#IMG > .a').css("display", "none");
+		$('#IMG > .primera').css("visibility", "hidden"); 
+		$('#IMG > .a').css("visibility", "hidden");
 
-		$('#IMG > .' + rt).css("display", "block"); // mostrar
+		$('#IMG > .' + rt).css("visibility", "visible"); // mostrar
 
 		CargarIMG('a');
 
@@ -65,8 +67,7 @@ function CargarIMG(rr)
 function ImgOnload(rr)
 {
 
-	$('#IMG > .' + rr).css("display", "block"); // mostrar
-	$('#load > .load').css("display", "none"); // Quitar load
+	$('.load').css("visibility", "hidden");
 
 	CargarIMG('a');
 
